@@ -25,6 +25,10 @@
 		856F927029125F8F007688C3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926F29125F8F007688C3 /* UIColor+Extension.swift */; };
 		856F927329126272007688C3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 856F927229126272007688C3 /* RxCocoa */; };
 		856F927529126272007688C3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 856F927429126272007688C3 /* RxSwift */; };
+		856F9278291270B3007688C3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F9277291270B3007688C3 /* APIService.swift */; };
+		856F927B291270DF007688C3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F927A291270DF007688C3 /* APIRouter.swift */; };
+		85719E5F2912C9CB00E8F88D /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85719E5E2912C9CB00E8F88D /* Signup.swift */; };
+		85719E622912CA0A00E8F88D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85719E612912CA0A00E8F88D /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		856F926429125331007688C3 /* UserInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextField.swift; sourceTree = "<group>"; };
 		856F926C291259EC007688C3 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		856F926F29125F8F007688C3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		856F9277291270B3007688C3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		856F927A291270DF007688C3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		85719E5E2912C9CB00E8F88D /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		85719E612912CA0A00E8F88D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		856F923329123FD0007688C3 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				85719E602912C9D000E8F88D /* Domain */,
 				856F926E29125F79007688C3 /* Extension */,
 				856F9263291251EB007688C3 /* Presentation */,
 				856F925A29125094007688C3 /* Application */,
@@ -220,6 +229,33 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		856F927629127095007688C3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				856F9279291270D5007688C3 /* Model */,
+				856F9277291270B3007688C3 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		856F9279291270D5007688C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				856F927A291270DF007688C3 /* APIRouter.swift */,
+				85719E5E2912C9CB00E8F88D /* Signup.swift */,
+				85719E612912CA0A00E8F88D /* Login.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85719E602912C9D000E8F88D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				856F927629127095007688C3 /* Network */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F9260291250EF007688C3 /* LoginViewController.swift in Sources */,
+				85719E622912CA0A00E8F88D /* Login.swift in Sources */,
+				856F927B291270DF007688C3 /* APIRouter.swift in Sources */,
 				856F926D291259EC007688C3 /* GreenButton.swift in Sources */,
 				856F925929125048007688C3 /* SignupView.swift in Sources */,
 				856F92572912500A007688C3 /* SignupViewController.swift in Sources */,
@@ -307,9 +345,11 @@
 				856F924E29124E11007688C3 /* SignupViewModel.swift in Sources */,
 				856F923529123FD0007688C3 /* AppDelegate.swift in Sources */,
 				856F923729123FD0007688C3 /* SceneDelegate.swift in Sources */,
+				856F9278291270B3007688C3 /* APIService.swift in Sources */,
 				856F925E291250C6007688C3 /* LoginView.swift in Sources */,
 				856F926529125331007688C3 /* UserInputTextField.swift in Sources */,
 				856F927029125F8F007688C3 /* UIColor+Extension.swift in Sources */,
+				85719E5F2912C9CB00E8F88D /* Signup.swift in Sources */,
 				856F926229125149007688C3 /* LoginViewModel.swift in Sources */,
 				856F925329124E64007688C3 /* BaseView.swift in Sources */,
 			);

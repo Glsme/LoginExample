@@ -21,6 +21,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func bindData() {
@@ -29,6 +30,12 @@ class LoginViewController: BaseViewController {
             .bind { (vc, _) in
                 let signupVC = SignupViewController()
                 vc.present(signupVC, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.loginButton.rx.tap
+            .bind { _ in
+                APIService.shared.requestLogin()
             }
             .disposed(by: disposeBag)
     }

@@ -60,7 +60,8 @@ class SignupViewController: BaseViewController {
         mainView.signupButton.rx.tap
             .withUnretained(self)
             .bind { (vc, _) in
-                vc.dismiss(animated: true)
+                
+//                vc.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
     }
