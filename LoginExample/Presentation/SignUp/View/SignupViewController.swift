@@ -60,7 +60,7 @@ class SignupViewController: BaseViewController {
         mainView.signupButton.rx.tap
             .withUnretained(self)
             .bind { (vc, _) in
-                
+                APIService.shared.requestSignup()
 //                vc.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
