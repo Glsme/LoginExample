@@ -25,6 +25,39 @@ class LoginViewController: BaseViewController {
     }
     
     override func bindData() {
+        
+        mainView.emailTextField.rx.controlEvent(.editingDidBegin)
+            .asObservable()
+            .withUnretained(self)
+            .subscribe { (vc, _) in
+                vc.mainView.emailTextField.layer.borderColor = UIColor.black.cgColor
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.emailTextField.rx.controlEvent(.editingDidEnd)
+            .asObservable()
+            .withUnretained(self)
+            .subscribe { (vc, _) in
+                vc.mainView.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.passwordTextField.rx.controlEvent(.editingDidBegin)
+            .asObservable()
+            .withUnretained(self)
+            .subscribe { (vc, _) in
+                vc.mainView.passwordTextField.layer.borderColor = UIColor.black.cgColor
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.passwordTextField.rx.controlEvent(.editingDidEnd)
+            .asObservable()
+            .withUnretained(self)
+            .subscribe { (vc, _) in
+                vc.mainView.passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
+            }
+            .disposed(by: disposeBag)
+        
         mainView.signupButton.rx.tap
             .withUnretained(self)
             .bind { (vc, _) in
