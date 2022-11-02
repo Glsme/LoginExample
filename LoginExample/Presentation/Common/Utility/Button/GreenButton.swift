@@ -12,7 +12,7 @@ class GreenButton: UIButton {
         super.init(frame: frame)
         
         layer.masksToBounds = true
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
         clipsToBounds = true
         backgroundColor = .softGreen
     }

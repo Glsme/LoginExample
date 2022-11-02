@@ -7,13 +7,19 @@
 
 import Foundation
 
+enum APIError: Error {
+    case noData
+    case errorInParsingData
+    case responseError
+}
+
 class APIService {
     static let shared = APIService()
     
     private init() { }
     
-    func requestLogin() {
-        let router = APIRouter.login(email: "hano@hano.com", password: "12345678")
+    func requestLogin(email: String, password: String, completionHandler: @escaping (Result<String, APIError>) -> Void) {
+        let router = APIRouter.login(email: email, password: password)
         
         var component = URLComponents()
         var queryItems: [URLQueryItem] = []
@@ -32,18 +38,18 @@ class APIService {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard error == nil else {
-                print("error: \(error!)")
                 return
             }
             
-            guard let data = data else { return }
-            guard let parsingData = try? JSONDecoder().decode(Login.self, from: data) else { return }
+            guard let data = data else { return completionHandler(.failure(.noData)) }
+            guard let parsingData = try? JSONDecoder().decode(Login.self, from: data) else { return completionHandler(.failure(.errorInParsingData)) }
             let token = parsingData.token
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return completionHandler(.failure(.responseError)) }
             
             print("Request Success: \(token)")
             
+            completionHandler(.success("success"))
         }.resume()
     }
     

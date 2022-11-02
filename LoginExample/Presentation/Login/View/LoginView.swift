@@ -68,7 +68,7 @@ class LoginView: BaseView {
         }
         
         signupButton.snp.makeConstraints { make in
-            make.top.equalTo(loginButton.snp.bottom).offset(50)
+            make.top.equalTo(loginButton.snp.bottom).offset(20)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             make.height.equalTo(emailTextField.snp.height)
             make.width.equalTo(emailTextField.snp.width)

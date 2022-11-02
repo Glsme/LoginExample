@@ -15,7 +15,7 @@ class UserInputTextField: UITextField {
         layer.masksToBounds = true
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 1
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
         clipsToBounds = true
         backgroundColor = .white
         textAlignment = .center

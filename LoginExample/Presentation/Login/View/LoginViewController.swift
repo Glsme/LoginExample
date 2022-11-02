@@ -34,8 +34,19 @@ class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         mainView.loginButton.rx.tap
-            .bind { _ in
-                APIService.shared.requestLogin()
+            .withUnretained(self)
+            .bind { (vc, _) in
+                guard let email = vc.mainView.emailTextField.text else { return }
+                guard let password = vc.mainView.passwordTextField.text else { return }
+                
+                APIService.shared.requestLogin(email: email, password: password) { result in
+                    switch result {
+                    case.success(_):
+                        print("success")
+                    case .failure(_):
+                        print("failure")
+                    }
+                }
             }
             .disposed(by: disposeBag)
     }
