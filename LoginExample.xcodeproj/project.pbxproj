@@ -19,6 +19,9 @@
 		856F925E291250C6007688C3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F925D291250C6007688C3 /* LoginView.swift */; };
 		856F9260291250EF007688C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F925F291250EF007688C3 /* LoginViewController.swift */; };
 		856F926229125149007688C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926129125149007688C3 /* LoginViewModel.swift */; };
+		856F926529125331007688C3 /* UserInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926429125331007688C3 /* UserInputTextField.swift */; };
+		856F926A2912543F007688C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 856F92692912543F007688C3 /* SnapKit */; };
+		856F926D291259EC007688C3 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926C291259EC007688C3 /* GreenButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,8 @@
 		856F925D291250C6007688C3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		856F925F291250EF007688C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		856F926129125149007688C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		856F926429125331007688C3 /* UserInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextField.swift; sourceTree = "<group>"; };
+		856F926C291259EC007688C3 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F926A2912543F007688C3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,11 +74,8 @@
 		856F923329123FD0007688C3 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				856F9263291251EB007688C3 /* Presentation */,
 				856F925A29125094007688C3 /* Application */,
-				856F925029124E52007688C3 /* Coomon */,
-				856F924A29124CDC007688C3 /* Profile */,
-				856F924929124CD5007688C3 /* Login */,
-				856F924829124CCC007688C3 /* SignUp */,
 				856F923D29123FD1007688C3 /* Assets.xcassets */,
 				856F923F29123FD1007688C3 /* LaunchScreen.storyboard */,
 				856F924229123FD1007688C3 /* Info.plist */,
@@ -125,6 +128,7 @@
 		856F925029124E52007688C3 /* Coomon */ = {
 			isa = PBXGroup;
 			children = (
+				856F926629125337007688C3 /* Utility */,
 				856F925129124E5B007688C3 /* Base */,
 			);
 			path = Coomon;
@@ -165,6 +169,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		856F9263291251EB007688C3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				856F924829124CCC007688C3 /* SignUp */,
+				856F924929124CD5007688C3 /* Login */,
+				856F924A29124CDC007688C3 /* Profile */,
+				856F925029124E52007688C3 /* Coomon */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		856F926629125337007688C3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				856F926B291259AE007688C3 /* Button */,
+				856F926729125340007688C3 /* TextField */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		856F926729125340007688C3 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				856F926429125331007688C3 /* UserInputTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		856F926B291259AE007688C3 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				856F926C291259EC007688C3 /* GreenButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +221,9 @@
 			dependencies = (
 			);
 			name = LoginExample;
+			packageProductDependencies = (
+				856F92692912543F007688C3 /* SnapKit */,
+			);
 			productName = LoginExample;
 			productReference = 856F923129123FD0007688C3 /* LoginExample.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 856F922829123FD0007688C3;
+			packageReferences = (
+				856F92682912543F007688C3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 856F923229123FD0007688C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F9260291250EF007688C3 /* LoginViewController.swift in Sources */,
+				856F926D291259EC007688C3 /* GreenButton.swift in Sources */,
 				856F925929125048007688C3 /* SignupView.swift in Sources */,
 				856F92572912500A007688C3 /* SignupViewController.swift in Sources */,
 				856F925529124FD1007688C3 /* BaseViewController.swift in Sources */,
@@ -243,6 +290,7 @@
 				856F923529123FD0007688C3 /* AppDelegate.swift in Sources */,
 				856F923729123FD0007688C3 /* SceneDelegate.swift in Sources */,
 				856F925E291250C6007688C3 /* LoginView.swift in Sources */,
+				856F926529125331007688C3 /* UserInputTextField.swift in Sources */,
 				856F926229125149007688C3 /* LoginViewModel.swift in Sources */,
 				856F925329124E64007688C3 /* BaseView.swift in Sources */,
 			);
@@ -388,7 +436,6 @@
 				INFOPLIST_FILE = LoginExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,7 +466,6 @@
 				INFOPLIST_FILE = LoginExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +506,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		856F92682912543F007688C3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		856F92692912543F007688C3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 856F92682912543F007688C3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 856F922929123FD0007688C3 /* Project object */;
 }
