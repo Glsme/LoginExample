@@ -28,7 +28,7 @@ class SignView: BaseView {
         return view
     }()
     
-    let loginButton: GreenButton = {
+    let signupButton: GreenButton = {
         let view = GreenButton()
         view.setTitle("회원가입", for: .normal)
         return view
@@ -39,7 +39,7 @@ class SignView: BaseView {
     }
     
     override func configureUI() {
-        [userNameTextField, emailTextField, passwordTextField, loginButton].forEach {
+        [userNameTextField, emailTextField, passwordTextField, signupButton].forEach {
             self.addSubview($0)
         }
     }
@@ -66,7 +66,7 @@ class SignView: BaseView {
             make.width.equalTo(emailTextField.snp.width)
         }
         
-        loginButton.snp.makeConstraints { make in
+        signupButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(50)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             make.height.equalTo(emailTextField.snp.height)
