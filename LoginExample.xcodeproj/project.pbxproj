@@ -22,6 +22,7 @@
 		856F926529125331007688C3 /* UserInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926429125331007688C3 /* UserInputTextField.swift */; };
 		856F926A2912543F007688C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 856F92692912543F007688C3 /* SnapKit */; };
 		856F926D291259EC007688C3 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926C291259EC007688C3 /* GreenButton.swift */; };
+		856F927029125F8F007688C3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926F29125F8F007688C3 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		856F926129125149007688C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		856F926429125331007688C3 /* UserInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextField.swift; sourceTree = "<group>"; };
 		856F926C291259EC007688C3 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		856F926F29125F8F007688C3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		856F923329123FD0007688C3 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				856F926E29125F79007688C3 /* Extension */,
 				856F9263291251EB007688C3 /* Presentation */,
 				856F925A29125094007688C3 /* Application */,
 				856F923D29123FD1007688C3 /* Assets.xcassets */,
@@ -125,13 +128,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		856F925029124E52007688C3 /* Coomon */ = {
+		856F925029124E52007688C3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				856F926629125337007688C3 /* Utility */,
 				856F925129124E5B007688C3 /* Base */,
 			);
-			path = Coomon;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		856F925129124E5B007688C3 /* Base */ = {
@@ -175,7 +178,7 @@
 				856F924829124CCC007688C3 /* SignUp */,
 				856F924929124CD5007688C3 /* Login */,
 				856F924A29124CDC007688C3 /* Profile */,
-				856F925029124E52007688C3 /* Coomon */,
+				856F925029124E52007688C3 /* Common */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -203,6 +206,14 @@
 				856F926C291259EC007688C3 /* GreenButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		856F926E29125F79007688C3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				856F926F29125F8F007688C3 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				856F923729123FD0007688C3 /* SceneDelegate.swift in Sources */,
 				856F925E291250C6007688C3 /* LoginView.swift in Sources */,
 				856F926529125331007688C3 /* UserInputTextField.swift in Sources */,
+				856F927029125F8F007688C3 /* UIColor+Extension.swift in Sources */,
 				856F926229125149007688C3 /* LoginViewModel.swift in Sources */,
 				856F925329124E64007688C3 /* BaseView.swift in Sources */,
 			);

@@ -14,7 +14,10 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = .white
         configureUI()
+        bindData()
     }
     
     func configureUI() { }
+    
+    func bindData() { }
 }
