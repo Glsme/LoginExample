@@ -23,6 +23,8 @@
 		856F926A2912543F007688C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 856F92692912543F007688C3 /* SnapKit */; };
 		856F926D291259EC007688C3 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926C291259EC007688C3 /* GreenButton.swift */; };
 		856F927029125F8F007688C3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F926F29125F8F007688C3 /* UIColor+Extension.swift */; };
+		856F927329126272007688C3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 856F927229126272007688C3 /* RxCocoa */; };
+		856F927529126272007688C3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 856F927429126272007688C3 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F927529126272007688C3 /* RxSwift in Frameworks */,
+				856F927329126272007688C3 /* RxCocoa in Frameworks */,
 				856F926A2912543F007688C3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +238,8 @@
 			name = LoginExample;
 			packageProductDependencies = (
 				856F92692912543F007688C3 /* SnapKit */,
+				856F927229126272007688C3 /* RxCocoa */,
+				856F927429126272007688C3 /* RxSwift */,
 			);
 			productName = LoginExample;
 			productReference = 856F923129123FD0007688C3 /* LoginExample.app */;
@@ -265,6 +271,7 @@
 			mainGroup = 856F922829123FD0007688C3;
 			packageReferences = (
 				856F92682912543F007688C3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				856F927129126272007688C3 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 856F923229123FD0007688C3 /* Products */;
 			projectDirPath = "";
@@ -528,6 +535,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		856F927129126272007688C3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -535,6 +550,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 856F92682912543F007688C3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		856F927229126272007688C3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 856F927129126272007688C3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		856F927429126272007688C3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 856F927129126272007688C3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
