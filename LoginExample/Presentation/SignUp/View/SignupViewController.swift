@@ -76,5 +76,4 @@ class SignupViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
     }
-
 }
