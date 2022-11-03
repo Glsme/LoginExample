@@ -43,12 +43,12 @@ class APIService {
             
             guard let data = data else { return completion(.failure(.noData)) }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return completion(.failure(.responseError)) }
-            guard let parsingData = String(data: data, encoding: .utf8) else { return completion(.failure(.alreadyExist)) }
-//            completion(.success(data))
+            guard let parsingData = try? JSONDecoder().decode(T.self, from: data) else { return completion(.failure(.errorInParsingData)) }
+            completion(.success(parsingData))
         }.resume()
     }
     
-    func requestLogin(email: String, password: String, completionHandler: @escaping (Result<String, APIError>) -> Void) {
+    func requestLogin(email: String, password: String, completionHandler: @escaping (Result<Login, APIError>) -> Void) {
         let router = APIRouter.login(email: email, password: password)
         
         var component = URLComponents()
@@ -79,7 +79,7 @@ class APIService {
             
             print("Request Success: \(token)")
             
-            completionHandler(.success("success"))
+            completionHandler(.success(parsingData))
         }.resume()
     }
     
