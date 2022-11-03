@@ -14,6 +14,7 @@ class SignupViewController: BaseViewController {
 
     let mainView = SignView()
     let disposeBag = DisposeBag()
+    let viewModel = SignupViewModel()
     
     override func loadView() {
         self.view = mainView
@@ -64,14 +65,7 @@ class SignupViewController: BaseViewController {
                 guard let email = vc.mainView.emailTextField.text else { return }
                 guard let password = vc.mainView.passwordTextField.text else { return }
                 
-                APIService.shared.requestSignup(userName: userName, email: email, password: password) { result in
-                    switch result {
-                    case .success(let value):
-                        print("success: \(value)")
-                    case .failure(let error):
-                        print("error \(error)")
-                    }
-                }
+                vc.viewModel.postSignup(userName: userName, email: email, password: password)
 //                vc.dismiss(animated: true)
             }
             .disposed(by: disposeBag)

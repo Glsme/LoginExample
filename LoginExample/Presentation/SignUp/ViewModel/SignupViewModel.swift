@@ -13,9 +13,9 @@ class SignupViewModel {
         APIService.shared.requestSeSAC(type: String.self, url: router.url, parameters: router.parameters, method: router.httpMethod, header: router.header) { response in
             switch response {
             case .success(let success):
-                //
+                print(success)
             case .failure(let failure):
-                //
+                print(failure)
             }
         }
     }
