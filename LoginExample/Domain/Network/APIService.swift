@@ -11,6 +11,7 @@ enum APIError: Error {
     case noData
     case errorInParsingData
     case responseError
+    case alreadyExist
 }
 
 class APIService {
@@ -53,8 +54,8 @@ class APIService {
         }.resume()
     }
     
-    func requestSignup() {
-        let router = APIRouter.signup(userName: "hano", email: "hano@hano.com", password: "12345678")
+    func requestSignup(userName: String, email: String, password: String, completionHandler: @escaping (Result<String, APIError>) -> Void) {
+        let router = APIRouter.signup(userName: userName, email: email, password: password)
         
         var component = URLComponents()
         var queryItems: [URLQueryItem] = []
@@ -77,17 +78,12 @@ class APIService {
                 return
             }
             
-            guard let data = data else { return }
-            print(data)
-            
-            guard let response = response as? HTTPURLResponse else { return }
+            guard let data = data else { return completionHandler(.failure(.noData)) }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return completionHandler(.failure(.responseError)) }
             print(response.statusCode)
             
-            guard let parsingData = try? JSONDecoder().decode(Signup.self, from: data) else { return }
-            
-            print(parsingData)
-            
-            
+            guard let parsingData = String(data: data, encoding: .utf8) else { return completionHandler(.failure(.alreadyExist)) }
+            completionHandler(.success(parsingData))
             
         }.resume()
     }

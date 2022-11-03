@@ -60,7 +60,18 @@ class SignupViewController: BaseViewController {
         mainView.signupButton.rx.tap
             .withUnretained(self)
             .bind { (vc, _) in
-                APIService.shared.requestSignup()
+                guard let userName = vc.mainView.userNameTextField.text else { return }
+                guard let email = vc.mainView.emailTextField.text else { return }
+                guard let password = vc.mainView.passwordTextField.text else { return }
+                
+                APIService.shared.requestSignup(userName: userName, email: email, password: password) { result in
+                    switch result {
+                    case .success(let value):
+                        print("success: \(value)")
+                    case .failure(let error):
+                        print("error \(error)")
+                    }
+                }
 //                vc.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
