@@ -8,5 +8,15 @@
 import Foundation
 
 class SignupViewModel {
-    
+    final func postSignup(userName: String, email: String, password: String) {
+        let router = APIRouter.signup(userName: userName, email: email, password: password)
+        APIService.shared.requestSeSAC(type: String.self, url: router.url, parameters: router.parameters, method: router.httpMethod, header: router.header) { response in
+            switch response {
+            case .success(let success):
+                //
+            case .failure(let failure):
+                //
+            }
+        }
+    }
 }

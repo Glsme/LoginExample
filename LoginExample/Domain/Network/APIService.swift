@@ -7,19 +7,12 @@
 
 import Foundation
 
-enum APIError: Error {
-    case noData
-    case errorInParsingData
-    case responseError
-    case alreadyExist
-}
-
 class APIService {
     static let shared = APIService()
     
     private init() { }
     
-    func requestSeSAC<T: Decodable>(type: T.Type = T.self, url: URL, parameters: [String: String], method: String , header: (String, String), completion: @escaping (Result<T, APIError>) -> Void) {
+    final func requestSeSAC<T: Decodable>(type: T.Type = T.self, url: URL, parameters: [String: String], method: String , header: (String, String), completion: @escaping (Result<T, APIError>) -> Void) {
         var component = URLComponents()
         var queryItems: [URLQueryItem] = []
         

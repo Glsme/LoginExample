@@ -29,6 +29,7 @@
 		856F927B291270DF007688C3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F927A291270DF007688C3 /* APIRouter.swift */; };
 		85719E5F2912C9CB00E8F88D /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85719E5E2912C9CB00E8F88D /* Signup.swift */; };
 		85719E622912CA0A00E8F88D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85719E612912CA0A00E8F88D /* Login.swift */; };
+		85719E712914325E00E8F88D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85719E702914325E00E8F88D /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		856F927A291270DF007688C3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		85719E5E2912C9CB00E8F88D /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		85719E612912CA0A00E8F88D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		85719E702914325E00E8F88D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				856F927A291270DF007688C3 /* APIRouter.swift */,
 				85719E5E2912C9CB00E8F88D /* Signup.swift */,
 				85719E612912CA0A00E8F88D /* Login.swift */,
+				85719E702914325E00E8F88D /* APIError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				85719E5F2912C9CB00E8F88D /* Signup.swift in Sources */,
 				856F926229125149007688C3 /* LoginViewModel.swift in Sources */,
 				856F925329124E64007688C3 /* BaseView.swift in Sources */,
+				85719E712914325E00E8F88D /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
