@@ -7,12 +7,12 @@
 
 import Foundation
 
-class APIService {
+final class APIService {
     static let shared = APIService()
     
     private init() { }
     
-    final func requestSeSAC<T: Decodable>(type: T.Type = T.self, url: URL, parameters: [String: String], method: String , header: (String, String), completion: @escaping (Result<T, APIError>) -> Void) {
+    public func requestSeSAC<T: Decodable>(type: T.Type = T.self, url: URL, parameters: [String: String], method: String , header: (String, String), completion: @escaping (Result<T, APIError>) -> Void) {
         var component = URLComponents()
         var queryItems: [URLQueryItem] = []
         
@@ -21,7 +21,6 @@ class APIService {
         }
         
         component.queryItems = queryItems
-        
         var request = URLRequest(url: url)
         
         request.httpMethod = method

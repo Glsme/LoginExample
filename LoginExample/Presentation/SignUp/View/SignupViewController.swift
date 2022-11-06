@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class SignupViewController: BaseViewController {
+final class SignupViewController: BaseViewController {
 
     let mainView = SignView()
     let disposeBag = DisposeBag()

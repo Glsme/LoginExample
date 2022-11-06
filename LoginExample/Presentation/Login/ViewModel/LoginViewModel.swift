@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginViewModel {
+final class LoginViewModel {
     public func requsetLogin(email: String, password: String, completion: @escaping () -> Void) {
         let api = APIRouter.login(email: email, password: email)
         

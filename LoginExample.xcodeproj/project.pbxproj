@@ -119,13 +119,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		856F924A29124CDC007688C3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		856F924B29124DBF007688C3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +185,6 @@
 			children = (
 				856F924829124CCC007688C3 /* SignUp */,
 				856F924929124CD5007688C3 /* Login */,
-				856F924A29124CDC007688C3 /* Profile */,
 				856F925029124E52007688C3 /* Common */,
 			);
 			path = Presentation;

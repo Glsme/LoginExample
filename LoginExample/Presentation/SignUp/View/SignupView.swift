@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SignView: BaseView {
+final class SignView: BaseView {
     
     let userNameTextField: UserInputTextField = {
         let view = UserInputTextField()

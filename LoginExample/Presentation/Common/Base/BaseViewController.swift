@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
         bindData()
     }
     
-    func configureUI() { }
+    public func configureUI() { }
     
-    func bindData() { }
+    public func bindData() { }
 }

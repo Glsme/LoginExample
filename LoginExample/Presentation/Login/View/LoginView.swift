@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 class LoginView: BaseView {
-    
     let emailTextField: UserInputTextField = {
         let view = UserInputTextField()
         view.placeholder = "이메일을 입력해주세요"
