@@ -35,9 +35,7 @@ final class APIService {
             
             guard let data = data else { return completion(.failure(.noData)) }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return completion(.failure(.responseError)) }
-//            guard let parsingData = try? JSONDecoder().decode(T.self, from: data) else { return completion(.failure(.errorInParsingData)) }
-            
-            
+
             if let parsingData = try? JSONDecoder().decode(T.self, from: data) {
                 completion(.success(parsingData))
             } else if let stringData = String(data: data, encoding: .utf8) {

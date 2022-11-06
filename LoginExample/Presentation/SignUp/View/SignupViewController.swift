@@ -34,21 +34,20 @@ final class SignupViewController: BaseViewController {
     }
     
     override func bindData() {
-        mainView.userNameTextField.rx.text
-            .orEmpty
-            .map { $0.count < 2 }
+        let input = SignupViewModel.Input(nameText: mainView.userNameTextField.rx.text,
+                                          emailText: mainView.emailTextField.rx.text,
+                                          passwordText: mainView.passwordTextField.rx.text)
+        let output = viewModel.transform(input: input)
+        
+        output.nameValidation
             .bind(to: mainView.emailTextField.rx.isHidden)
             .disposed(by: disposeBag)
         
-        mainView.emailTextField.rx.text
-            .orEmpty
-            .map { $0.count < 5 }
+        output.emailValidation
             .bind(to: mainView.passwordTextField.rx.isHidden, mainView.signupButton.rx.isHidden)
             .disposed(by: disposeBag)
         
-        mainView.passwordTextField.rx.text
-            .orEmpty
-            .map { $0.count >= 8 }
+        output.passwordValidation
             .withUnretained(self)
             .bind(onNext: { (vc, value) in
                 if value {

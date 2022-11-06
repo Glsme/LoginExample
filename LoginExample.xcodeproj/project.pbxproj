@@ -105,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				856F924C29124DE4007688C3 /* View */,
-				856F924B29124DBF007688C3 /* ViewModel */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -132,6 +131,7 @@
 			children = (
 				856F92562912500A007688C3 /* SignupViewController.swift */,
 				856F925829125048007688C3 /* SignupView.swift */,
+				856F924B29124DBF007688C3 /* ViewModel */,
 			);
 			path = View;
 			sourceTree = "<group>";
