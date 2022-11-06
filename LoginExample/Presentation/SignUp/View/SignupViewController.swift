@@ -65,8 +65,9 @@ class SignupViewController: BaseViewController {
                 guard let email = vc.mainView.emailTextField.text else { return }
                 guard let password = vc.mainView.passwordTextField.text else { return }
                 
-                vc.viewModel.postSignup(userName: userName, email: email, password: password)
-//                vc.dismiss(animated: true)
+                vc.viewModel.postSignup(userName: userName, email: email, password: password) {
+                    vc.dismiss(animated: true)
+                }
             }
             .disposed(by: disposeBag)
     }

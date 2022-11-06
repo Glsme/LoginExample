@@ -14,6 +14,7 @@ class LoginViewController: BaseViewController {
     
     let mainView = LoginView()
     let disposeBag = DisposeBag()
+    let viewModel = LoginViewModel()
     
     override func loadView() {
         self.view = mainView
@@ -72,13 +73,8 @@ class LoginViewController: BaseViewController {
                 guard let email = vc.mainView.emailTextField.text else { return }
                 guard let password = vc.mainView.passwordTextField.text else { return }
                 
-                APIService.shared.requestLogin(email: email, password: password) { result in
-                    switch result {
-                    case.success(_):
-                        print("success")
-                    case .failure(_):
-                        print("failure")
-                    }
+                vc.viewModel.requsetLogin(email: email, password: password) {
+                    print("Success")
                 }
             }
             .disposed(by: disposeBag)
