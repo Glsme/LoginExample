@@ -20,5 +20,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "267509FA-9925-4406-A25C-07AF6945E081"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginExample/Domain/Network/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "requestSeSAC(type:url:parameters:method:header:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "843F54BA-7FE7-4A7C-8842-AB32548E6E7B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginExample/Domain/Network/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "requestSeSAC(type:url:parameters:method:header:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52233B27-2A2D-49FB-9B62-6A825C6AA70B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginExample/Domain/Network/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "requestSeSAC(type:url:parameters:method:header:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4A48BF2-649F-48D2-9F7F-F4DE877CBC75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginExample/Domain/Network/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "requestSeSAC(type:url:parameters:method:header:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4A48BF2-649F-48D2-9F7F-F4DE877CBC75 - be47c08cc0215a9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginExample.APIService.requestSeSAC&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Foundation.URL, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, method: Swift.String, header: (Swift.String, Swift.String), completion: (Swift.Result&lt;&#x3c4;_0_0, LoginExample.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LoginExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seokjunehong/Desktop/iOS/seSAC/LoginExample/LoginExample/Domain/Network/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "F4A48BF2-649F-48D2-9F7F-F4DE877CBC75 - 28eb4b571f0e6d7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LoginExample.APIService.requestSeSAC&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Foundation.URL, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, method: Swift.String, header: (Swift.String, Swift.String), completion: (Swift.Result&lt;&#x3c4;_0_0, LoginExample.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LoginExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seokjunehong/Desktop/iOS/seSAC/LoginExample/LoginExample/Domain/Network/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

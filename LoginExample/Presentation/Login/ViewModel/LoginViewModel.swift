@@ -9,7 +9,7 @@ import Foundation
 
 final class LoginViewModel {
     public func requsetLogin(email: String, password: String, completion: @escaping () -> Void) {
-        let api = APIRouter.login(email: email, password: email)
+        let api = APIRouter.login(email: email, password: password)
         
         APIService.shared.requestSeSAC(type: Login.self, url: api.url, parameters: api.parameters, method: api.httpMethod, header: api.header) { response in
             switch response {

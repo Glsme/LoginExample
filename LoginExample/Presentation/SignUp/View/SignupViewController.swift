@@ -48,7 +48,7 @@ final class SignupViewController: BaseViewController {
         
         mainView.passwordTextField.rx.text
             .orEmpty
-            .map { $0.count > 8 }
+            .map { $0.count >= 8 }
             .withUnretained(self)
             .bind(onNext: { (vc, value) in
                 if value {
@@ -66,7 +66,9 @@ final class SignupViewController: BaseViewController {
                 guard let password = vc.mainView.passwordTextField.text else { return }
                 
                 vc.viewModel.postSignup(userName: userName, email: email, password: password) {
-                    vc.dismiss(animated: true)
+                    DispatchQueue.main.async {
+                        vc.dismiss(animated: true)
+                    }
                 }
             }
             .disposed(by: disposeBag)
